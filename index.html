@@ -21,12 +21,6 @@
             <div class="live-status">
                 <span class="pulse-dot"></span> NEXT GP: MONZA GP
             </div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-twitch"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
         </div>
     </div>
 
@@ -44,7 +38,7 @@
                 <a href="#schedule">Kalendář</a>
             </nav>
             <div class="nav-cta">
-                <a href="#" class="btn-primary">Discord <i class="fab fa-discord"></i></a>
+                <a href="https://discord.gg/KUtKXxw97" class="btn-primary">Discord <i class="fab fa-discord"></i></a>
             </div>
         </div>
     </header>
@@ -55,8 +49,6 @@
         <div class="container hero-content">
             <div class="hero-badge"><i class="fas fa-flag-checkered"></i> SEZÓNA 2026</div>
             <h1>FORMULA ELITE <br><span class="gradient-text">RACING LEAGUE</span></h1>
-            <p>Simracingová liga na motivy královny motorsportu. Nejlepší jezdci, extrémní souboje,
-                bezkompromisní fair play.</p>
             <div class="hero-buttons">
                 <a href="#teams" class="btn-primary glow-effect">Prohlédnout týmy</a>
                 <a href="#standings" class="btn-secondary">Aktuální pořadí</a>
@@ -64,25 +56,40 @@
             <div class="hero-stats">
                 <div class="stat-item">
                     <h3>10</h3>
-                    <p>Špičkových jezdců</p>
+                    <p>Jezdců</p>
                 </div>
                 <div class="stat-item">
-                    <h3>5</h3>
-                    <p>Licencovaných týmů</p>
+                    <h3>6</h3>
+                    <p>Týmů</p>
                 </div>
                 <div class="stat-item">
-                    <h3>12</h3>
-                    <p>Náročných tratí</p>
+                    <h3>24</h3>
+                    <p>Tratí</p>
                 </div>
             </div>
         </div>
+        <a class="scroll-indicator" href="#teams" aria-label="Přejít na týmy a jezdce">
+            <span class="scroll-indicator-label">POSUŇ SE DOLŮ</span>
+            <span class="scroll-indicator-line"></span>
+        </a>
     </section>
+
+    <aside class="race-ticker" aria-label="FERL v číslech">
+        <div class="race-ticker-track">
+            <div class="race-ticker-group">
+                <span>Formula Elite Racing League</span><i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                <span>Formula Elite Racing League</span><i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                <span>Formula Elite Racing League</span><i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                <span>Formula Elite Racing League</span><i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                <span>Formula Elite Racing League</span><i class="fas fa-flag-checkered" aria-hidden="true"></i>
+            </div>
+    </aside>
 
     <!-- Týmy a Jezdci -->
     <section id="teams" class="teams-section">
         <div class="container">
             <div class="section-header">
-                <h2>OFICIÁLNÍ TÝMY & JEZDCI</h2>
+                <h2>TÝMY & JEZDCI</h2>
                 <p>Soupiska jezdců pro nadcházející Velké ceny</p>
             </div>
 
@@ -138,7 +145,7 @@
                     <div class="drivers-list">
                         <div class="driver-row">
                             <span class="driver-num">04</span>
-                            <span class="driver-name">@neznámý-uživatel</span>
+                            <span class="driver-name">@Eddie</span>
                         </div>
                         <div class="driver-row">
                             <span class="driver-num">81</span>
@@ -158,7 +165,7 @@
                     <div class="drivers-list">
                         <div class="driver-row">
                             <span class="driver-num">63</span>
-                            <span class="driver-name">@itz.d3jwik</span>
+                            <span class="driver-name">@D3jwik</span>
                         </div>
                         <div class="driver-row">
                             <span class="driver-num">12</span>
@@ -168,21 +175,33 @@
                 </div>
 
                 <!-- Aston Martin -->
-                <div class="team-card full-width-card" style="--team-color: #229971;">
+                <div class="team-card" style="--team-color: #229971;">
                     <div class="team-header">
                         <div class="team-info">
                             <span class="constructor-name">Aston Martin Aramco F1 Team</span>
                         </div>
                         <div class="team-logo-badge">AMF1</div>
                     </div>
-                    <div class="drivers-list horizontal-list">
+                    <div class="drivers-list">
                         <div class="driver-row">
                             <span class="driver-num">14</span>
-                            <span class="driver-name">@Bomboclat</span>
+                            <span class="driver-name">@FentMax_</span>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Kick Sauber -->
+                <div class="team-card" style="--team-color: #52E252;">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <span class="constructor-name">Stake F1 Team Kick Sauber</span>
+                        </div>
+                        <div class="team-logo-badge">KICK</div>
+                    </div>
+                    <div class="drivers-list">
                         <div class="driver-row">
-                            <span class="driver-num">18</span>
-                            <span class="driver-name">@Volné místo</span>
+                            <span class="driver-num">27</span>
+                            <span class="driver-name">@Bomboclat</span>
                         </div>
                     </div>
                 </div>
@@ -204,6 +223,7 @@
                         <tr>
                             <th>Poř.</th>
                             <th>Jezdec</th>
+                            <th>Tým</th>
                             <th class="points-col">Body</th>
                         </tr>
                     </thead>
@@ -211,51 +231,115 @@
                         <tr>
                             <td><span class="pos-badge gold">1</span></td>
                             <td class="driver-td">@Honza CZ</td>
+                            <td class="team-name team-ferrari">Scuderia Ferrari HP</td>
                             <td class="points-col">293</td>
                         </tr>
                         <tr>
                             <td><span class="pos-badge silver">2</span></td>
                             <td class="driver-td">@Vertexx</td>
+                            <td class="team-name team-ferrari">Scuderia Ferrari HP</td>
                             <td class="points-col">266</td>
                         </tr>
                         <tr>
                             <td><span class="pos-badge bronze">3</span></td>
                             <td class="driver-td">@LUKE3</td>
+                            <td class="team-name team-red-bull">Oracle Red Bull Racing</td>
                             <td class="points-col">244</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td class="driver-td">@brum1k</td>
+                            <td class="team-name team-mclaren">McLaren Formula 1 Team</td>
                             <td class="points-col">185</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td class="driver-td">Itz.d3jwik</td>
+                            <td class="driver-td">@D3jwik</td>
+                            <td class="team-name team-mercedes">Mercedes-AMG PETRONAS F1 Team</td>
                             <td class="points-col">168</td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td class="driver-td">@Drobek</td>
+                            <td class="team-name team-mercedes">Mercedes-AMG PETRONAS F1 Team</td>
                             <td class="points-col">81</td>
                         </tr>
                         <tr>
                             <td>7</td>
                             <td class="driver-td">@Urb1</td>
+                            <td class="team-name team-red-bull">Oracle Red Bull Racing</td>
                             <td class="points-col">64</td>
                         </tr>
                         <tr>
                             <td>8</td>
                             <td class="driver-td">@Eddie</td>
+                            <td class="team-name team-mclaren">McLaren Formula 1 Team</td>
                             <td class="points-col">26</td>
                         </tr>
                         <tr>
                             <td>9</td>
                             <td class="driver-td">@FentMax_</td>
+                            <td class="team-name team-aston-martin">Aston Martin Aramco F1 Team</td>
                             <td class="points-col">10</td>
                         </tr>
                         <tr>
                             <td>10</td>
                             <td class="driver-td">@Bomboclat</td>
+                            <td class="team-name team-sauber">Stake F1 Team Kick Sauber</td>
+                            <td class="points-col">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="standings-subheader">
+                <h3>ŠAMPIONÁT TÝMŮ</h3>
+                <p>Průběžné bodové hodnocení konstruktérů</p>
+            </div>
+
+            <div class="table-container">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>Poř.</th>
+                            <th>Tým</th>
+                            <th class="points-col">Body</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="pos-badge gold">1</span></td>
+                            <td class="team-name team-ferrari">Scuderia Ferrari HP</td>
+                            <td class="points-col">352</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pos-badge silver">2</span></td>
+                            <td class="team-name team-red-bull">Oracle Red Bull Racing</td>
+                            <td class="points-col">241</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pos-badge bronze">3</span></td>
+                            <td class="team-name team-mclaren">McLaren Mastercard F1 Team</td>
+                            <td class="points-col">197</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="team-name team-mercedes">Mercedes-AMG PETRONAS F1 Team</td>
+                            <td class="points-col">166</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="team-name team-haas">TGR Haas F1 Team</td>
+                            <td class="points-col">22</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="team-name team-aston-martin">Aston Martin Aramco Formula One Team</td>
+                            <td class="points-col">10</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="team-name team-sauber">Stake F1 Team Kick Sauber</td>
                             <td class="points-col">8</td>
                         </tr>
                     </tbody>
@@ -306,7 +390,7 @@
         <div class="container footer-content">
             <div class="footer-col">
                 <span class="logo-accent">FERL</span>
-                <p>Formula Elite Racing League je profesionální simracingová komunita vytvořená fanoušky motorsportu.
+                <p>Formula Elite Racing League jesimracingová komunita vytvořená fanoušky motorsportu.
                 </p>
             </div>
             <div class="footer-col">
@@ -321,8 +405,8 @@
             <div class="footer-col">
                 <h4>Připoj se k nám</h4>
                 <p>Máš zájem závodit? Vstoupit do naší komunity můžeš přes náš oficiální Discord server.</p>
-                <a href="#" class="btn-primary" style="margin-top: 15px; display: inline-block;"><i
-                        class="fab fa-discord"></i> Discord Server</a>
+                <a href="https://discord.gg/KUtKXxw97" class="btn-primary"
+                    style="margin-top: 15px; display: inline-block;"><i class="fab fa-discord"></i> Discord Server</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -331,6 +415,52 @@
             </div>
         </div>
     </footer>
+    <script>
+        const hero = document.querySelector('.hero');
+        const heroTitle = document.querySelector('.hero h1');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (hero && heroTitle && !prefersReducedMotion) {
+            let scrollUpdatePending = false;
+
+            const updateHeroTitle = () => {
+                const progress = Math.min(
+                    Math.max(-hero.getBoundingClientRect().top / (window.innerHeight * 0.7), 0),
+                    1
+                );
+
+                heroTitle.style.setProperty('--hero-title-opacity', 1 - progress);
+                heroTitle.style.setProperty('--hero-title-offset', `${-24 * progress}px`);
+                scrollUpdatePending = false;
+            };
+
+            window.addEventListener('scroll', () => {
+                if (!scrollUpdatePending) {
+                    window.requestAnimationFrame(updateHeroTitle);
+                    scrollUpdatePending = true;
+                }
+            }, { passive: true });
+
+            updateHeroTitle();
+        }
+
+        if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+
+            document.querySelectorAll('.section-header, .team-card, .table-container, .race-card, .footer-col')
+                .forEach(element => {
+                    element.classList.add('reveal-item');
+                    revealObserver.observe(element);
+                });
+        }
+    </script>
 </body>
 
 </html>

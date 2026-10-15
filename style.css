@@ -224,9 +224,10 @@ ul {
 .hero {
     position: relative;
     height: 90vh;
+    min-height: 680px;
     display: flex;
     align-items: center;
-    background: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1622401976173-a0b80c12fbd1?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
 }
 
 .hero-overlay {
@@ -241,7 +242,9 @@ ul {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
 }
 
 .hero-badge {
@@ -262,11 +265,16 @@ ul {
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 56px;
+    width: 100%;
+    font-size: clamp(32px, 9vw, 112px);
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    opacity: var(--hero-title-opacity, 1);
+    transform: translateY(var(--hero-title-offset, 0px));
+    will-change: opacity, transform;
 }
 
 .hero p {
@@ -274,12 +282,15 @@ ul {
     font-size: 20px;
     margin-bottom: 30px;
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
     margin-bottom: 50px;
+    justify-content: center;
 }
 
 .hero-stats {
@@ -287,6 +298,99 @@ ul {
     gap: 40px;
     border-top: 1px solid var(--border-color);
     padding-top: 30px;
+    justify-content: center;
+}
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 2;
+    bottom: 24px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    transform: translateX(-50%);
+}
+
+.scroll-indicator-label {
+    font-family: var(--font-heading);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.scroll-indicator-line {
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(var(--accent), rgba(225, 6, 0, 0));
+    transform-origin: top;
+    animation: scroll-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+    0%, 100% {
+        opacity: 0.45;
+        transform: scaleY(0.65);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.race-ticker {
+    overflow: hidden;
+    background: var(--accent);
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transform: skewY(-1.2deg) scale(1.02);
+    margin: -8px 0;
+    position: relative;
+    z-index: 3;
+}
+
+.race-ticker-track,
+.race-ticker-group {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.race-ticker-track {
+    animation: ticker-scroll 32s linear infinite;
+}
+
+.race-ticker-group {
+    flex-shrink: 0;
+    gap: 28px;
+    padding: 13px 14px;
+}
+
+.race-ticker-group span {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.race-ticker-group i {
+    font-size: 11px;
+    opacity: 0.72;
+}
+
+.race-ticker-group .fa-circle {
+    font-size: 5px;
+}
+
+@keyframes ticker-scroll {
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .stat-item h3 {
@@ -338,7 +442,7 @@ ul {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .team-card::before {
@@ -354,6 +458,7 @@ ul {
 .team-card:hover {
     transform: translateY(-5px);
     border-color: var(--team-color);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
 }
 
 .full-width-card {
@@ -413,6 +518,13 @@ ul {
     padding: 12px 15px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.driver-row:hover {
+    transform: translateX(4px);
+    border-color: var(--team-color);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .driver-num {
@@ -432,6 +544,24 @@ ul {
 /* STANDINGS SECTION */
 .standings-section {
     padding: 100px 0;
+}
+
+.standings-subheader {
+    margin: 72px 0 28px;
+    padding-left: 18px;
+    border-left: 3px solid var(--accent);
+}
+
+.standings-subheader h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.standings-subheader p {
+    color: var(--text-muted);
+    font-size: 16px;
 }
 
 .table-container {
@@ -463,8 +593,52 @@ ul {
     font-weight: 600;
 }
 
+.standings-table .team-name {
+    font-weight: 700;
+}
+
+.team-ferrari {
+    color: #E8002D;
+}
+
+.team-red-bull {
+    color: #5B91E0;
+}
+
+.team-mclaren {
+    color: #FF8000;
+}
+
+.team-mercedes {
+    color: #27F4D2;
+}
+
+.team-haas {
+    color: #E6002D;
+}
+
+.team-aston-martin {
+    color: #229971;
+}
+
+.team-sauber {
+    color: #52E252;
+}
+
 .standings-table tr:hover {
     background: var(--bg-card-hover);
+}
+
+.standings-table tbody tr:nth-child(1) td:first-child {
+    border-left: 2px solid #d4af37;
+}
+
+.standings-table tbody tr:nth-child(2) td:first-child {
+    border-left: 2px solid #c0c0c0;
+}
+
+.standings-table tbody tr:nth-child(3) td:first-child {
+    border-left: 2px solid #cd7f32;
 }
 
 .pos-badge {
@@ -524,12 +698,30 @@ ul {
     border-radius: 8px;
     padding: 25px;
     position: relative;
-    transition: all 0.3s;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.race-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .race-card.active-race {
     border-color: var(--accent);
     box-shadow: 0 0 20px rgba(225, 6, 0, 0.15);
+}
+
+.race-card.active-race .race-round::after {
+    content: 'DALŠÍ ZÁVOD';
+    float: right;
+    padding: 3px 7px;
+    border: 1px solid rgba(225, 6, 0, 0.45);
+    border-radius: 3px;
+    background: rgba(225, 6, 0, 0.12);
+    color: #ff7773;
+    font-size: 9px;
+    letter-spacing: 0.8px;
 }
 
 .race-round {
@@ -619,6 +811,17 @@ ul {
     font-size: 14px;
 }
 
+.reveal-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media(max-width: 968px) {
 
     .nav-links,
@@ -627,7 +830,11 @@ ul {
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: clamp(28px, 9vw, 72px);
+    }
+
+    .hero {
+        min-height: 620px;
     }
 
     .footer-content {
@@ -637,5 +844,37 @@ ul {
 
     .horizontal-list {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-indicator-line {
+        animation: none;
+    }
+
+    .race-ticker {
+        overflow-x: auto;
+    }
+
+    .race-ticker-track {
+        animation: none;
+    }
+
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .team-card,
+    .driver-row,
+    .race-card {
+        transition: none;
+    }
+
+    .team-card:hover,
+    .driver-row:hover,
+    .race-card:hover {
+        transform: none;
     }
 }
