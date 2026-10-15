@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Elite Racing League | FERL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Horní lišta -->
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="live-status">
+                <span class="pulse-dot"></span> NEXT GP: MONZA GP
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitch"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigace -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">FERL</span>
+                <span class="logo-sub">FORMULA ELITE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">Domů</a>
+                <a href="#teams">Týmy & Jezdci</a>
+                <a href="#standings">Šampionát</a>
+                <a href="#schedule">Kalendář</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#" class="btn-primary">Discord <i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Sekce -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge"><i class="fas fa-flag-checkered"></i> SEZÓNA 2026</div>
+            <h1>FORMULA ELITE <br><span class="gradient-text">RACING LEAGUE</span></h1>
+            <p>Simracingová liga na motivy královny motorsportu. Nejlepší jezdci, extrémní souboje,
+                bezkompromisní fair play.</p>
+            <div class="hero-buttons">
+                <a href="#teams" class="btn-primary glow-effect">Prohlédnout týmy</a>
+                <a href="#standings" class="btn-secondary">Aktuální pořadí</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>10</h3>
+                    <p>Špičkových jezdců</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>Licencovaných týmů</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>Náročných tratí</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Týmy a Jezdci -->
+    <section id="teams" class="teams-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>OFICIÁLNÍ TÝMY & JEZDCI</h2>
+                <p>Soupiska jezdců pro nadcházející Velké ceny</p>
+            </div>
+
+            <div class="teams-grid">
+                <!-- Red Bull -->
+                <div class="team-card" style="--team-color: #3671C6;">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <span class="constructor-name">Oracle Red Bull Racing</span>
+                        </div>
+                        <div class="team-logo-badge">RBR</div>
+                    </div>
+                    <div class="drivers-list">
+                        <div class="driver-row">
+                            <span class="driver-num">01</span>
+                            <span class="driver-name">@LUKE3</span>
+                        </div>
+                        <div class="driver-row">
+                            <span class="driver-num">11</span>
+                            <span class="driver-name">@Urb1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ferrari -->
+                <div class="team-card" style="--team-color: #E8002D;">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <span class="constructor-name">Scuderia Ferrari HP</span>
+                        </div>
+                        <div class="team-logo-badge">FER</div>
+                    </div>
+                    <div class="drivers-list">
+                        <div class="driver-row">
+                            <span class="driver-num">16</span>
+                            <span class="driver-name">@Vertexx</span>
+                        </div>
+                        <div class="driver-row">
+                            <span class="driver-num">44</span>
+                            <span class="driver-name">@Honza CZ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- McLaren -->
+                <div class="team-card" style="--team-color: #FF8000;">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <span class="constructor-name">McLaren Formula 1 Team</span>
+                        </div>
+                        <div class="team-logo-badge">MCL</div>
+                    </div>
+                    <div class="drivers-list">
+                        <div class="driver-row">
+                            <span class="driver-num">04</span>
+                            <span class="driver-name">@neznámý-uživatel</span>
+                        </div>
+                        <div class="driver-row">
+                            <span class="driver-num">81</span>
+                            <span class="driver-name">@brum1k</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mercedes -->
+                <div class="team-card" style="--team-color: #27F4D2;">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <span class="constructor-name">Mercedes-AMG PETRONAS F1 Team</span>
+                        </div>
+                        <div class="team-logo-badge">MER</div>
+                    </div>
+                    <div class="drivers-list">
+                        <div class="driver-row">
+                            <span class="driver-num">63</span>
+                            <span class="driver-name">@itz.d3jwik</span>
+                        </div>
+                        <div class="driver-row">
+                            <span class="driver-num">12</span>
+                            <span class="driver-name">@Drobek</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aston Martin -->
+                <div class="team-card full-width-card" style="--team-color: #229971;">
+                    <div class="team-header">
+                        <div class="team-info">
+                            <span class="constructor-name">Aston Martin Aramco F1 Team</span>
+                        </div>
+                        <div class="team-logo-badge">AMF1</div>
+                    </div>
+                    <div class="drivers-list horizontal-list">
+                        <div class="driver-row">
+                            <span class="driver-num">14</span>
+                            <span class="driver-name">@Bomboclat</span>
+                        </div>
+                        <div class="driver-row">
+                            <span class="driver-num">18</span>
+                            <span class="driver-name">@Volné místo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Šampionát (Tabulka) -->
+    <section id="standings" class="standings-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>ŠAMPIONÁT 2026</h2>
+                <p>Průběžné bodové hodnocení jezdců</p>
+            </div>
+
+            <div class="table-container">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>Poř.</th>
+                            <th>Jezdec</th>
+                            <th class="points-col">Body</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="pos-badge gold">1</span></td>
+                            <td class="driver-td">@Honza CZ</td>
+                            <td class="points-col">293</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pos-badge silver">2</span></td>
+                            <td class="driver-td">@Vertexx</td>
+                            <td class="points-col">266</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pos-badge bronze">3</span></td>
+                            <td class="driver-td">@LUKE3</td>
+                            <td class="points-col">244</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="driver-td">@brum1k</td>
+                            <td class="points-col">185</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="driver-td">Itz.d3jwik</td>
+                            <td class="points-col">168</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="driver-td">@Drobek</td>
+                            <td class="points-col">81</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="driver-td">@Urb1</td>
+                            <td class="points-col">64</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="driver-td">@Eddie</td>
+                            <td class="points-col">26</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="driver-td">@FentMax_</td>
+                            <td class="points-col">10</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="driver-td">@Bomboclat</td>
+                            <td class="points-col">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalendář -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>KALENDÁŘ ZÁVODŮ</h2>
+                <p>Přehled Velkých cen</p>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="race-card completed">
+                    <div class="race-round">RND 13</div>
+                    <div class="race-country">Belgie</div>
+                    <div class="race-track">Spa-Francorchamps</div>
+                    <div class="race-date">Odjeto</div>
+                </div>
+                <div class="race-card completed">
+                    <div class="race-round">RND 14</div>
+                    <div class="race-country">Maďarsko</div>
+                    <div class="race-track">Hungaroring</div>
+                    <div class="race-date">Odjeto</div>
+                </div>
+                <div class="race-card active-race">
+                    <div class="race-round">RND 15</div>
+                    <div class="race-country">Itálie</div>
+                    <div class="race-track">Autodromo Nazionale Monza</div>
+                    <div class="race-date">Následuje</div>
+                </div>
+                <div class="race-card">
+                    <div class="race-round">RND 16</div>
+                    <div class="race-country">Ázerbájdžán</div>
+                    <div class="race-track">Baku City Circuit</div>
+                    <div class="race-date">Následuje</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patička -->
+    <footer id="rules" class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <span class="logo-accent">FERL</span>
+                <p>Formula Elite Racing League je profesionální simracingová komunita vytvořená fanoušky motorsportu.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Rychlé odkazy</h4>
+                <ul>
+                    <li><a href="#home">Domů</a></li>
+                    <li><a href="#teams">Týmy & Jezdci</a></li>
+                    <li><a href="#standings">Šampionát</a></li>
+                    <li><a href="#schedule">Kalendář</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Připoj se k nám</h4>
+                <p>Máš zájem závodit? Vstoupit do naší komunity můžeš přes náš oficiální Discord server.</p>
+                <a href="#" class="btn-primary" style="margin-top: 15px; display: inline-block;"><i
+                        class="fab fa-discord"></i> Discord Server</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Formula Elite Racing League (FERL). Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
